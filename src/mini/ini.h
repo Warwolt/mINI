@@ -697,7 +697,8 @@ namespace mINI
 			bool fileIsBOM = false;
 			{
 				INIReader reader(filename, true);
-				if ((readSuccess = reader >> originalData))
+				readSuccess = reader >> originalData;
+				if (readSuccess)
 				{
 					lineData = reader.getLines();
 					fileIsBOM = reader.isBOM;
