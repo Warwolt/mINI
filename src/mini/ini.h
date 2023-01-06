@@ -669,6 +669,7 @@ namespace mINI
 					);
 				}
 			}
+			output.push_back("\n");
 			return output;
 		}
 
